@@ -1,6 +1,7 @@
 export default function page() {
-  return(
-    <main>
-    </main>
-  )
+    return (
+        <main>
+            
+        </main>
+    )
 }
