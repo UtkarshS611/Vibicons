@@ -36,35 +36,12 @@ export default function Hero() {
         }
     ]
 
-    const featBox = [
-        {
-            id: "1",
-            title: "50+",
-            desc: "Curated Icons",
-        },
-        {
-            id: "2",
-            title: "100%",
-            desc: "Open Source",
-        },
-        {
-            id: "3",
-            title: "0 $",
-            desc: "Free to use Forever",
-        },
-        {
-            id: "4",
-            title: "100%",
-            desc: "Customizable",
-        }
-    ]
-
     return (
         <section className="overflow-hidden">
             <Header />
             <HeroBackground />
-            <div className="relative z-999 flex flex-col xl:flex-row items-center justify-center xl:justify-between w-screen pt-44 xl:pt-64 px-6 xl:px-32 gap-12 xl:gap-0">
-                <div className="w-full xl:max-w-xl space-y-4 text-center xl:text-start">
+            <div className="flex flex-col xl:flex-row items-center justify-center xl:justify-between w-screen pt-44 xl:pt-64 px-6 xl:px-32 gap-12 xl:gap-0">
+                <div className="relative z-999  w-full xl:max-w-xl space-y-4 text-center xl:text-start">
                     <h1 className="font-bold text-5xl lg:text-7xl">
                         Animated icons, made for <span className="text-primary">React</span>.
                     </h1>
@@ -87,7 +64,7 @@ export default function Hero() {
                 </div>
 
 
-                <div className="grid grid-cols-3 grid-rows-3 gap-2 place-items-center">
+                <div className="relative z-999 grid grid-cols-3 grid-rows-3 gap-2 place-items-center">
                     {iconBox.map((icon, index) => (
                         <div
                             key={index}
@@ -99,17 +76,6 @@ export default function Hero() {
                 </div>
 
             </div>
-            {/* <div className="relative z-999 border flex items-center justify-center">
-                {featBox.map((feat) => (
-                    <div
-                        key={feat.id}
-                        className="flex flex-col items-center justify-center gap-2 border w-1/4 py-12"
-                    >
-                        <h2 className="text-primary font-semibold text-2xl">{feat.title}</h2>
-                        <p className="text-muted-foreground">{feat.desc}</p>
-                    </div>
-                ))}
-            </div> */}
         </section>
     )
 }

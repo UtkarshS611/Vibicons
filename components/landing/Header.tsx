@@ -4,7 +4,7 @@ import Link from "next/link";
 
 import { MenuIcon } from "lucide-react";
 
-import { Button, buttonVariants } from "@/components/ui/button";
+import { buttonVariants } from "@/components/ui/button";
 
 import {
     NavigationMenu,
@@ -47,13 +47,13 @@ export default function Header({ className }: HeaderProps) {
                         width={45}
                         height={45}
                     /> */}
-                    <div
-                    className="h-8 w-8 border border-muted-foreground rounded-xl flex items-center justify-center"
-                    >
-                        <h1 className="text-primary">
-                            V
-                        </h1>
-                    </div>
+                        <div
+                            className="h-8 w-8 border border-muted-foreground rounded-xl flex items-center justify-center"
+                        >
+                            <h1 className="text-primary">
+                                V
+                            </h1>
+                        </div>
                         <h1 className="text-2xl">
                             Vibicons
                         </h1>
@@ -80,9 +80,7 @@ export default function Header({ className }: HeaderProps) {
                 </div>
                 <Sheet>
                     <SheetTrigger className="lg:hidden">
-                        <Button variant="outline" size="icon">
                             <MenuIcon className="h-4 w-4 text-primary" />
-                        </Button>
                     </SheetTrigger>
                     <SheetContent side="top" className="max-h-screen overflow-auto z-9999">
                         <SheetHeader>
