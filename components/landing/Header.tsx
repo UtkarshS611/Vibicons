@@ -1,15 +1,13 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 
 import { MenuIcon } from "lucide-react";
-
-import { buttonVariants } from "@/components/ui/button";
 
 import {
     NavigationMenu,
 } from "@/components/ui/navigation-menu";
-
 import {
     Sheet,
     SheetContent,
@@ -17,7 +15,8 @@ import {
     SheetTitle,
     SheetTrigger,
 } from "@/components/ui/sheet";
-import Image from "next/image";
+import { buttonVariants } from "@/components/ui/button";
+import ThemeToggle from "@/components/ui/theme-toggle";
 
 
 interface HeaderProps {
@@ -41,12 +40,6 @@ export default function Header({ className }: HeaderProps) {
                         href="/"
                         className="flex items-center gap-2"
                     >
-                        {/* <Image
-                        src="/logo.jpeg"
-                        alt="Noir & Blanc Designs Logo"
-                        width={45}
-                        height={45}
-                    /> */}
                         <div
                             className="h-8 w-8 border border-muted-foreground rounded-xl flex items-center justify-center"
                         >
@@ -77,10 +70,11 @@ export default function Header({ className }: HeaderProps) {
                         className={`${buttonVariants({ variant: "secondary", size: "lg" })}w-44 xl:w-fit`}>
                         Docs
                     </Link>
+                    <ThemeToggle />
                 </div>
                 <Sheet>
                     <SheetTrigger className="lg:hidden">
-                            <MenuIcon className="h-4 w-4 text-primary" />
+                        <MenuIcon className="h-4 w-4 text-primary" />
                     </SheetTrigger>
                     <SheetContent side="top" className="max-h-screen overflow-auto z-9999">
                         <SheetHeader>
@@ -112,6 +106,7 @@ export default function Header({ className }: HeaderProps) {
                                     className={`${buttonVariants({ variant: "secondary", size: "lg" })} w-full`}>
                                     Docs
                                 </Link>
+                                <ThemeToggle />
                             </div>
                         </div>
                     </SheetContent>

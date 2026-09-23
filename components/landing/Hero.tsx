@@ -1,8 +1,9 @@
 import Link from "next/link";
 
 import { buttonVariants } from "@/components/ui/button";
+
 import { HeroBackground } from "@/components/landing/HeroBackground";
-import Header from "./Header";
+import Header from "@/components/landing/Header";
 
 export default function Hero() {
 
@@ -52,12 +53,12 @@ export default function Hero() {
                     <div className="flex flex-col xl:flex-row items-center gap-2 xl:gap-4">
                         <Link
                             href={"/icons"}
-                            className={`${buttonVariants({ variant: "default", size: "lg" })} text-white w-44 xl:w-fit`}>
+                            className={`${buttonVariants({ variant: "default", size: "lg" })} w-44 xl:w-fit`}>
                             Explore Icons
                         </Link>
                         <Link
                             href={"/docs"}
-                            className={`${buttonVariants({ variant: "secondary", size: "lg" })} text-white w-44 xl:w-fit`}>
+                            className={`${buttonVariants({ variant: "secondary", size: "lg" })} w-44 xl:w-fit`}>
                             Docs
                         </Link>
                     </div>
