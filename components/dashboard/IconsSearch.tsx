@@ -1,6 +1,6 @@
 import { Search } from "lucide-react";
 
-export default function DashboardSearch() {
+export default function IconsSearch() {
     return (
         <div
             className="mx-4 h-10 w-full max-w-xl rounded-lg border border-input bg-sidebar flex items-center"

@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Geist:ital,wght@0,100..900;1,100..900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
 @import "tailwindcss";
 @import "tw-animate-css";
 @import "shadcn/tailwind.css";
@@ -7,6 +8,8 @@
   font-family: "Bricolage Grotesque";
   src: url("/fonts/BricolageGrotesque.ttf") format("truetype");
 }
+
+@custom-variant dark (&:is(.dark *));
 
 @theme inline {
   --color-background: var(--background);
@@ -168,4 +171,8 @@ h6 {
   backdrop-filter: blur(50px);
   -webkit-backdrop-filter: blur(50px);
   border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.font-mono {
+  font-family: "JetBrains Mono", monospace;
 }

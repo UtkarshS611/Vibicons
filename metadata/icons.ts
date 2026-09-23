@@ -1,15 +1,15 @@
 export interface IconMetadata {
     name: string;
-    component: string;
-    categories: string[];
+    slug: string;
+    category: string;
     tags: string[];
 }
 
 export const icons: IconMetadata[] = [
     {
         name: "Bell",
-        component: "Bell",
-        categories: ["status", "notification"],
+        slug: "bell",
+        category: "notification",
         tags: [
             "alert",
             "notification",

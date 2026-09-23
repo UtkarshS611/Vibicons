@@ -18,7 +18,6 @@ import { FaGithub } from "react-icons/fa";
 import ThemeToggle from "@/components/ui/theme-toggle"
 
 import { Button } from "@/components/ui/button"
-import IconsSearch from "@/components/dashboard/DashboardSearch";
 
 export default function DashboardHeader({
     sidebarOpen,
@@ -36,7 +35,6 @@ export default function DashboardHeader({
                         {sidebarOpen ? <PanelLeftClose className="size-5" /> : <PanelLeftOpen className="size-5" />}
                     </Button>
                 </div>
-                <IconsSearch />
             </div>
             <div className="flex items-center gap-2">
                 <ThemeToggle />

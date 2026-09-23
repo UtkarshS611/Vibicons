@@ -4,6 +4,7 @@ import { buttonVariants } from "@/components/ui/button";
 
 import { HeroBackground } from "@/components/landing/HeroBackground";
 import Header from "@/components/landing/Header";
+import { MoveUpRight } from "lucide-react";
 
 export default function Hero() {
 
@@ -43,6 +44,9 @@ export default function Hero() {
             <HeroBackground />
             <div className="flex flex-col xl:flex-row items-center justify-center xl:justify-between w-screen pt-44 xl:pt-64 px-6 xl:px-32 gap-12 xl:gap-0">
                 <div className="relative z-999  w-full xl:max-w-xl space-y-4 text-center xl:text-start">
+                    {/* <div className="rounded-full px-6 border w-fit font-mono">
+                        Welcome to <span className="text-primary">Vibicons</span>
+                    </div> */}
                     <h1 className="font-bold text-5xl lg:text-7xl">
                         Animated icons, made for <span className="text-primary">React</span>.
                     </h1>
@@ -53,13 +57,17 @@ export default function Hero() {
                     <div className="flex flex-col xl:flex-row items-center gap-2 xl:gap-4">
                         <Link
                             href={"/dashboard/icons"}
-                            className={`${buttonVariants({ variant: "default", size: "lg" })} w-44 xl:w-fit`}>
-                            Explore Icons
+                            className={`${buttonVariants({ variant: "default" })} w-44 xl:w-fit flex items-center`}
+                        >
+                            <span>Explore Icons</span>
+                            <MoveUpRight className="size-3" />
                         </Link>
                         <Link
-                            href={"dashboard/docs/installation"}
-                            className={`${buttonVariants({ variant: "secondary", size: "lg" })} w-44 xl:w-fit`}>
-                            Docs
+                            href={"/dashboard/docs/installation"}
+                            className={`${buttonVariants({ variant: "secondary" })} w-44 xl:w-fit flex items-center`}
+                        >
+                            <span>View Docs</span>
+                            <MoveUpRight className="size-3" />
                         </Link>
                     </div>
                 </div>

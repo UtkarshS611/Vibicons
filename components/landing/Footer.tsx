@@ -32,14 +32,14 @@ export default function Footer() {
                     </p>
                     <div className="flex flex-col md:flex-row items-center justify-center gap-3">
                         <Link
-                            href={"/icons"}
+                            href={"/dashboard/icons"}
                             className={`${buttonVariants({ variant: "secondary" })} w-44 xl:w-fit flex items-center`}
                         >
                             <span>Explore Icons</span>
                             <MoveUpRight className="size-3" />
                         </Link>
                         <Link
-                            href={"/installation"}
+                            href={"/dashboard/docs/installation"}
                             className={`${buttonVariants({ variant: "secondary" })} w-44 xl:w-fit flex items-center`}
                         >
                             <span>View Docs</span>
