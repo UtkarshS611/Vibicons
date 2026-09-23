@@ -52,12 +52,12 @@ export default function Hero() {
 
                     <div className="flex flex-col xl:flex-row items-center gap-2 xl:gap-4">
                         <Link
-                            href={"/icons"}
+                            href={"/dashboard/icons"}
                             className={`${buttonVariants({ variant: "default", size: "lg" })} w-44 xl:w-fit`}>
                             Explore Icons
                         </Link>
                         <Link
-                            href={"/docs"}
+                            href={"dashboard/docs/installation"}
                             className={`${buttonVariants({ variant: "secondary", size: "lg" })} w-44 xl:w-fit`}>
                             Docs
                         </Link>

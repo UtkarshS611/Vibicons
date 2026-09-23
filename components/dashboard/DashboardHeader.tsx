@@ -14,11 +14,13 @@ import {
 } from "lucide-react"
 import { FaGithub } from "react-icons/fa";
 
-import ThemeToggle from "@/components/ui/theme-toggle"
-import { Button } from "@/components/ui/button"
-import IconsSearch from "./IconsSearch";
 
-export default function IconsHeader({
+import ThemeToggle from "@/components/ui/theme-toggle"
+
+import { Button } from "@/components/ui/button"
+import IconsSearch from "@/components/dashboard/DashboardSearch";
+
+export default function DashboardHeader({
     sidebarOpen,
     onToggleSidebar,
 }: IconsHeaderProps) {

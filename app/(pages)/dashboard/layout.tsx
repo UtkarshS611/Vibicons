@@ -1,11 +1,17 @@
 "use client";
 
+interface DashboardLayoutProps {
+    children: React.ReactNode;
+}
+
 import { useEffect, useState } from "react";
-import IconsHeader from "@/components/iconPage/IconsHeader";
-import IconsSidebar from "@/components/iconPage/IconsSidebar";
+
 import { useMediaQuery } from "@/hooks/useMediaQuery";
 
-export default function Page() {
+import DashboardHeader from "@/components/dashboard/DashboardHeader";
+import DashboardSidebar from "@/components/dashboard/DashboardSidebar";
+
+export default function Page({ children }: DashboardLayoutProps) {
     const isDesktop = useMediaQuery("(min-width: 1024px)");
     const [sidebarOpen, setSidebarOpen] = useState(false);
 
@@ -28,11 +34,11 @@ export default function Page() {
             {sidebarOpen && !isDesktop && (
                 <div
                     onClick={closeSidebar}
-                    className="fixed inset-0 z-40 bg-black/30"
+                    className="fixed inset-0 z-40 bg-black/10"
                 />
             )}
 
-            <IconsSidebar
+            <DashboardSidebar
                 open={sidebarOpen}
             />
 
@@ -42,13 +48,13 @@ export default function Page() {
                     ${sidebarOpen ? "lg:ml-72" : "ml-0"}
                 `}
             >
-                <IconsHeader
+                <DashboardHeader
                     sidebarOpen={sidebarOpen}
                     onToggleSidebar={toggleSidebar}
                 />
 
                 <div className="px-2 py-4">
-                    Main content
+                    {children}
                 </div>
             </div>
         </section>

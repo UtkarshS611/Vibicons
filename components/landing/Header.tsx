@@ -40,13 +40,13 @@ export default function Header({ className }: HeaderProps) {
                         href="/"
                         className="flex items-center gap-2"
                     >
-                        <div
-                            className="h-8 w-8 border border-muted-foreground rounded-xl flex items-center justify-center"
-                        >
-                            <h1 className="text-primary">
-                                V
-                            </h1>
-                        </div>
+                        <Image
+                            src="/logo/logo.svg"
+                            alt="Vibicons Logo"
+                            width={32}
+                            height={32}
+                            className="size-8"
+                        />
                         <h1 className="text-2xl">
                             Vibicons
                         </h1>
@@ -83,7 +83,13 @@ export default function Header({ className }: HeaderProps) {
                                     href="/"
                                     className="flex items-center gap-2 font-title text-2xl"
                                 >
-                                    Vibicons
+                                    <Image
+                                        src="/logo/logo.svg"
+                                        alt="Vibicons Logo"
+                                        width={32}
+                                        height={32}
+                                        className="size-8"
+                                    />
                                 </Link>
                             </SheetTitle>
                         </SheetHeader>

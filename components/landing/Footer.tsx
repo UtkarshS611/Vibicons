@@ -5,6 +5,7 @@ import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 import { buttonVariants } from "@/components/ui/button";
 import RotatingIcon from "./RotatingIcon";
+import Image from "next/image";
 
 export default function Footer() {
     const year = new Date().getFullYear();
@@ -48,7 +49,14 @@ export default function Footer() {
                 </div>
             </div>
             <footer className="relative z-999 bg-background rounded-t-[30px] pt-12 pb-6 px-16">
-                <div>
+                <div className="flex items-center gap-2">
+                    <Image
+                        src="/logo/logo.svg"
+                        alt="Vibicons Logo"
+                        width={32}
+                        height={32}
+                        className="size-8"
+                    />
                     <h2 className="font-semibold text-xl">Vibicons</h2>
                 </div>
                 <div className="flex items-center justify-start gap-24 pt-8">
