@@ -22,16 +22,19 @@ export default function IconsPage() {
         : null;
 
     return (
-        <div className="relative min-h-screen">
+        <div className="min-h-screen">
             <IconGallery onSelectIcon={setSelectedIcon} />
 
-            {selectedMetadata && SelectedIcon && (
-                <IconPreview
-                    selectedIcon={SelectedIcon}
-                    iconName={selectedMetadata.name}
-                    onClose={() => setSelectedIcon(null)}
-                />
-            )}
+            <IconPreview
+                selectedIcon={SelectedIcon}
+                iconName={selectedMetadata?.name ?? null}
+                open={selectedIcon !== null}
+                onOpenChange={(open: any) => {
+                    if (!open) {
+                        setSelectedIcon(null);
+                    }
+                }}
+            />
         </div>
     );
 }

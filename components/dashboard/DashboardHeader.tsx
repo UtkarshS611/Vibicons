@@ -24,8 +24,8 @@ export default function DashboardHeader({
     onToggleSidebar,
 }: IconsHeaderProps) {
     return (
-        <header className="border-b py-4 px-2 flex items-center justify-between">
-            <div className="flex items-center flex-1">
+        <header className="z-999 top-0 w-full border-b py-4 px-2 flex items-center justify-between">
+            <div className="flex items-center">
                 <div className="border-r w-fit pr-2 flex items-center justify-center">
                     <Button
                         size={"icon"}
@@ -37,7 +37,9 @@ export default function DashboardHeader({
                 </div>
             </div>
             <div className="flex items-center gap-2">
+                <div className="pl-2">
                 <ThemeToggle />
+                </div>
                 <Link
                     href={"https://github.com/UtkarshS611/Vibicons"}
                     target="_blank"
