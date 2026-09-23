@@ -4,13 +4,24 @@ import { MoveUpRight } from "lucide-react";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 import { buttonVariants } from "@/components/ui/button";
+import RotatingIcon from "./RotatingIcon";
 
 export default function Footer() {
     const year = new Date().getFullYear();
 
     return (
-        <section className="bg-linear-to-t from-black to-primary to-80% mx-4 rounded-t-[30px] px-4">
-            <div className="text-white pt-24 pb-64">
+        <section className="bg-linear-to-t from-black to-primary to-80% mx-4 rounded-t-[30px] px-4 overflow-hidden">
+            <div className="text-white pt-24 pb-64 relative overflow-hidden">
+                <RotatingIcon
+                    className="max-[1300px]:hidden absolute top-1/2 -translate-y-1/2 left-0 -translate-x-1/2"
+                    direction="counterclockwise"
+                />
+                <RotatingIcon
+                    className="max-[1300px]:hidden absolute top-1/2 -translate-y-1/2 right-0 translate-x-1/2"
+                />
+                <RotatingIcon
+                    className="min-[1300px]:hidden absolute top-full -translate-y-1/4 left-1/2 -translate-x-1/2"
+                />
                 <div className="text-center space-y-6">
                     <h2 className="text-4xl mx-auto w-full md:max-w-2xl font-semibold">
                         Your category has a breakout moment coming. Will you run it or watch a competitor?
@@ -36,7 +47,7 @@ export default function Footer() {
                     </div>
                 </div>
             </div>
-            <footer className="bg-background rounded-t-[30px] pt-12 pb-6 px-16">
+            <footer className="relative z-999 bg-background rounded-t-[30px] pt-12 pb-6 px-16">
                 <div>
                     <h2 className="font-semibold text-xl">Vibicons</h2>
                 </div>
